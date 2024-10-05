@@ -1,0 +1,17 @@
+.courseCardInfo {
+    display: flex;
+    align-items: center; 
+    padding: 0 2em;
+    gap: 10px;
+    background-color: #f0f1ff;
+    border-radius: 15px;
+}
+
+.courseCardText {
+    text-align: left;
+    color: black;
+}
+
+.courseCardInfo div {
+    flex: 1;
+  }

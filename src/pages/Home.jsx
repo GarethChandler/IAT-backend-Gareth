@@ -1,4 +1,6 @@
 import { useState } from "react";
+import CourseCard from "../components/CourseCard";
+import "../css/CourseCard.css";
 
 const Home = () => {
   //   const [count, setCount] = useState(0);
@@ -12,8 +14,13 @@ const Home = () => {
             count is {count}
           </button> */}
           <h2>Card</h2>
+          <p className="read-the-docs">Select a course to see details</p>
+          <div>
+            <CourseCard />
+            <CourseCard />
+            <CourseCard />
+          </div>
         </div>
-        <p className="read-the-docs">Select a course to see details</p>
       </div>
     </>
   );
