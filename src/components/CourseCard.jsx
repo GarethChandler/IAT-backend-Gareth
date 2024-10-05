@@ -1,4 +1,5 @@
 import "../css/CourseCard.css";
+import { Link } from "react-router-dom";
 
 const CourseCard = () => {
   return (
@@ -7,8 +8,11 @@ const CourseCard = () => {
       <div className="courseCardText">
         <h2>Course Name</h2>
         <p>Some details about the course</p>
+        <p>50 hours to complete</p>
       </div>
-      <button>See details</button>
+      <Link to="/details">
+        <button>See details</button>
+      </Link>
     </div>
   );
 };
