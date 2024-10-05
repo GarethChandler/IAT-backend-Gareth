@@ -15,3 +15,9 @@
 .courseCardInfo div {
     flex: 1;
   }
+
+.courseCardInfo img {
+    height: 10em;
+    width: auto;
+    border-radius: 15px
+}
