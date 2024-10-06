@@ -1,9 +1,22 @@
 import "../css/CourseCard.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const CourseCard = ({ courseName, imageUrl, description, timeToComplete }) => {
-  return (
+  const navigate = useNavigate();
+
+  const handleDetailsClick = () => {
+    navigate("/details", {
+        state: {
+            courseName,
+            imageUrl,
+            description,
+            timeToComplete,
+        },
+    }),
+  };
+  
+    return (
     <div className="courseCardInfo">
       <img src={imageUrl} alt={courseName} />
       <div className="courseCardText">
