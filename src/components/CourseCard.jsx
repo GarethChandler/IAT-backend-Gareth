@@ -9,7 +9,7 @@ const CourseCard = ({ courseName, imageUrl, description, timeToComplete }) => {
       <div className="courseCardText">
         <h2>{courseName}</h2>
         <p>{description}</p>
-        <p>{timeToComplete}</p>
+        <p>Time to complete: {timeToComplete}</p>
       </div>
       <Link to="/details">
         <button>See details</button>

@@ -9,25 +9,29 @@ const Home = () => {
   const courses = [
     {
       courseName: "Backend Development",
-      imageUrl: "../src/assets/book-with-green-board-background_1150-3836.jpg",
+      imageUrl:
+        "../src/assets/database-computer-system-digital-storage-concept_53876-123742.jpg",
       description:
-        "This courees will cover the fundamentals of backend development using the MREN stack.",
-      timeToComplete: "7 weeks",
+        "This course will cover the fundamentals of backend development using the MREN stack.",
+      timeToComplete: "50 hrs",
     },
     {
       courseName: "Frontend Development",
-      imageUrl: "../src/assets/book-with-green-board-background_1150-3836.jpg",
+      imageUrl:
+        "../src/assets/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg",
       description:
-        "This courees will cover the fundamentals of frontend development using the React.",
-      timeToComplete: "7 weeks",
+        "This course will cover the fundamentals of frontend development using the React.",
+      timeToComplete: "65 hrs",
     },
     {
-      courseName: "Frontend Development",
-      imageUrl: "../src/assets/book-with-green-board-background_1150-3836.jpg",
-      description:
-        "This courees will cover the fundamentals of frontend development using the React.",
-      timeToComplete: "7 weeks",
+      courseName: "Worm Farm Management",
+      imageUrl:
+        "../src/assets/gardening-youtube-template-design_23-2149547764.jpg",
+      description: "Learn how to care for you hobby worm farm.",
+      timeToComplete: "10 hrs",
     },
+
+    // Template to add more courses
     // {
     //   courseName: "",
     //   imgURL: "",
@@ -39,6 +43,7 @@ const Home = () => {
   return (
     <>
       <div>
+        {/* Heading and info */}
         <h1>MicroCourses</h1>
         <h2>Online Education</h2>
         <p>
@@ -52,6 +57,7 @@ const Home = () => {
           <h3>Available Courses</h3>
           <p className="read-the-docs">Select a course to see details</p>
           <div>
+            {/* Map courses to Course Card. */}
             {courses.map((course, index) => (
               <CourseCard
                 key={index}
