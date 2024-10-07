@@ -1,5 +1,5 @@
 import "../css/CourseCard.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const CourseCard = ({ courseName, imageUrl, description, timeToComplete }) => {
@@ -7,16 +7,16 @@ const CourseCard = ({ courseName, imageUrl, description, timeToComplete }) => {
 
   const handleDetailsClick = () => {
     navigate("/details", {
-        state: {
-            courseName,
-            imageUrl,
-            description,
-            timeToComplete,
-        },
-    }),
+      state: {
+        courseName,
+        imageUrl,
+        description,
+        timeToComplete,
+      },
+    });
   };
-  
-    return (
+
+  return (
     <div className="courseCardInfo">
       <img src={imageUrl} alt={courseName} />
       <div className="courseCardText">
@@ -24,9 +24,7 @@ const CourseCard = ({ courseName, imageUrl, description, timeToComplete }) => {
         <p>{description}</p>
         <p>Time to complete: {timeToComplete}</p>
       </div>
-      <Link to="/details">
-        <button>See details</button>
-      </Link>
+      <button onClick={handleDetailsClick}>See details</button>
     </div>
   );
 };
