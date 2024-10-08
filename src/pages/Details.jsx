@@ -8,15 +8,18 @@ const Details = () => {
     location.state || {};
   return (
     <>
+      {/* header */}
       <header className="detailsHeader">
         <Link to="/">
           <button className="back-btn">Go Back</button>
         </Link>
       </header>
+      {/* Course details passed from courseCard */}
       <h1>{courseName}</h1>
       <img src={imageUrl} alt={courseName} />
       <p>Detailed description: {description}</p>
       <p>Time to complete: {timeToComplete}</p>
+      {/* Course modules. Need to connect to db or something to get modules and detailed description */}
       <fieldset>
         <legend>Course Modules</legend>
         <button>Enrol now</button>

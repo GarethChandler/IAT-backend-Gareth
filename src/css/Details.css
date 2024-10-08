@@ -5,3 +5,9 @@ img {
 .detailsHeader {
     display: flex;
 }
+
+@media only screen and (max-width: 600px) {
+    img {
+        max-width: 20em;
+    }
+}

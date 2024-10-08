@@ -21,3 +21,31 @@
     width: auto;
     border-radius: 15px
 }
+
+@media only screen and (max-width: 600px) {
+    .courseCardInfo {
+        padding: 0.8em;
+        gap: 4px;
+        display: block;
+
+    }
+
+    .courseCardInfo div {
+        display: block;
+    }
+
+    .courseCardInfo img {
+        height: 6em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .courseCardInfo {
+        padding: 0.8em;
+        gap: 4px;
+    }
+
+    .courseCardInfo img {
+        height: 8em;
+    }
+}
