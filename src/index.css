@@ -59,6 +59,11 @@ button:active {
   background-color: #0f0f0f;
 }
 
+img {
+  display: block;
+  width: 100%
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -72,42 +77,12 @@ button:active {
   }
 }
 
-/* Small screen and phone */
 @media only screen and (max-width: 600px) {
-  :root {
-    line-height: 1.3;
-  }
-
-  body {
-    min-width: 200px;
-    min-height: 50vh;
-  }
-  
   h1 {
-    font-size: 2.0em;
-    line-height: 0.8;
+    font-size: 2.1em;
   }
 
   h2 {
-    font-size: 1.4em;
-    line-height: 0.8;
+    font-size: 1.1em;
   }
 }
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  body {
-    min-width: 600px;
-    min-height: 50vh;
-  }
-  
-  h1 {
-    font-size: 2.2em;
-    line-height: 0.8;
-  }
-
-  h2 {
-    font-size: 1.5em;
-    line-height: 0.8;
-  }
-} 

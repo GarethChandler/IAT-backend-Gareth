@@ -1,6 +1,6 @@
 //import { useState } from "react";
 import CourseCard from "../components/CourseCard";
-import "../css/CourseCard.css";
+import "../css/Home.css";
 
 const Home = () => {
   //   const [count, setCount] = useState(0);
@@ -12,7 +12,7 @@ const Home = () => {
       imageUrl:
         "../src/assets/database-computer-system-digital-storage-concept_53876-123742.jpg",
       description:
-        "This course will cover the fundamentals of backend development using the MREN stack.",
+        "This course will cover the fundamentals of backend development and the MERN stack.",
       timeToComplete: "50 hrs",
     },
     {
@@ -27,7 +27,7 @@ const Home = () => {
       courseName: "Worm Farm Management",
       imageUrl:
         "../src/assets/gardening-youtube-template-design_23-2149547764.jpg",
-      description: "Learn how to care for you hobby worm farm.",
+      description: "Learn how to build, care and feed your hobby worm farm.",
       timeToComplete: "10 hrs",
     },
 
@@ -50,13 +50,13 @@ const Home = () => {
           At MicroCourses we offer a diverse range of online courses for
           learners worldwide
         </p>
-        <div className="card">
+        <div className="card-container">
           {/* <button onClick={() => setCount((count) => count + 1)}>
             count is {count}
           </button> */}
           <h3>Available Courses</h3>
           <p className="read-the-docs">Select a course to see details</p>
-          <div>
+          <div className="course-grid">
             {/* Map courses to Course Card. */}
             {courses.map((course, index) => (
               <CourseCard

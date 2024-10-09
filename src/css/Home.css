@@ -1,0 +1,15 @@
+.course-grid {
+    display: grid;
+    gap: 2em;
+    grid-template-columns:
+        repeat(auto-fit, minmax(210px, 1fr));
+    margin: 2em 0;
+}
+
+.read-the-docs {
+    color: #888;
+  }
+
+.card-container {
+    padding: 2em;
+}

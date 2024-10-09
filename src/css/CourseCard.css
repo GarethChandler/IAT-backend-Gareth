@@ -1,51 +1,23 @@
 .courseCardInfo {
-    display: flex;
+    /* display: flex; */
     align-items: center; 
-    padding: 0 2em;
+    padding: 0 0 2em 0;
     gap: 10px;
     background-color: #f0f1ff;
     border-radius: 15px;
 }
 
 .courseCardText {
-    text-align: left;
-    color: black;
+    grid-row: span 3;
+    display: grid;
+    grid-template-rows: subgrid;
+    text-align: center;
+    color: #242424;
 }
 
-.courseCardInfo div {
-    flex: 1;
-  }
-
-.courseCardInfo img {
-    height: 10em;
-    width: auto;
-    border-radius: 15px
+img {
+    aspect-ratio: 19/10;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
 }
 
-@media only screen and (max-width: 600px) {
-    .courseCardInfo {
-        padding: 0.8em;
-        gap: 4px;
-        display: block;
-
-    }
-
-    .courseCardInfo div {
-        display: block;
-    }
-
-    .courseCardInfo img {
-        height: 6em;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .courseCardInfo {
-        padding: 0.8em;
-        gap: 4px;
-    }
-
-    .courseCardInfo img {
-        height: 8em;
-    }
-}
