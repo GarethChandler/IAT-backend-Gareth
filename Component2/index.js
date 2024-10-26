@@ -55,6 +55,16 @@ app.get("/courses", async (req, res) => {
   }
 });
 
+// Get course by ID
+app.get("/courses/:id", async (req, res) => {
+  try {
+    const courses = await Course.find();
+    res.json(courses);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 // Run server on port.
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
