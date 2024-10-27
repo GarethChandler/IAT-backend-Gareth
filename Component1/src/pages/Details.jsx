@@ -1,9 +1,13 @@
 // Details.jsx
 import { useLocation, Link } from "react-router-dom";
 import "../css/Details.css";
+import { useEffect } from "react";
 
 const Details = () => {
   const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   const { courseName, imageUrl, description, timeToComplete } =
     location.state || {};
   return (

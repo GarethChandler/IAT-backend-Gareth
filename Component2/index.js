@@ -1,15 +1,24 @@
 // Import dependencies for Express and Mongoose.
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 
-// refactor express to allow params and set port number
+// Initialise express to allow params and set port number
 const app = express();
 const PORT = 3000;
 
+// Middleware to parse json body
+app.use(express.json());
+app.use(cors());
+
 // Establish connection to MongoDB with uri. Set try/catch for error handling.
 async function main() {
-  const uri =
-    "mongodb+srv://glchand05:2SUmEzhsY24TF5bx@iatcluster.jqt04.mongodb.net/IAT_microservices?retryWrites=true&w=majority&appName=IATCluster";
+  // You must add connection string to .env to use mongodb. This is not synced to github
+  const uri = process.env.DATABASE_URI;
+
+  // /connect to MongoDB
   try {
     await mongoose.connect(uri);
     const db = mongoose.connection.db;
@@ -18,6 +27,7 @@ async function main() {
       `Connected to MongoDB Atlas using Mongoose! Database Name: ${dbName}`
     );
 
+    // Print the collections names to console
     const collections = await db.listCollections().toArray();
     console.log(
       `Database Info: ${dbName} has ${collections.length} collections`
@@ -34,18 +44,26 @@ main().catch(console.error);
 
 // Define MongoDB schema
 const courseSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
-  course_id: String,
-  courseName: String,
-  imageUrl: String,
-  description: String,
-  timeToComplete: String,
+  courseName: { type: String, required: true },
+  imageUrl: { type: String, required: true },
+  descriptionShort: { type: String, required: true },
+  descriptionLong: { type: String, required: true },
+  timeToComplete: { type: String, required: true },
+  instructor: { type: String, required: true },
+  category: { type: String, required: true },
 });
 
-// Define mongo model
+// Define mongoDB model
 const Course = mongoose.model("Course", courseSchema);
 
-// Get all courses
+/**
+ * Get all courses.
+ *
+ * @name GET /courses
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {Array} The array of courses.
+ */
 app.get("/courses", async (req, res) => {
   try {
     const courses = await Course.find();
@@ -55,11 +73,48 @@ app.get("/courses", async (req, res) => {
   }
 });
 
-// Get course by ID
+/**
+ * Get course by Id.
+ *
+ * @name GET /courses/:id
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {Array} The array of course.
+ */
 app.get("/courses/:id", async (req, res) => {
   try {
-    const courses = await Course.find();
-    res.json(courses);
+    const course = await Course.findById(req.params.id);
+    if (course == null) {
+      return res.status(404).json({ message: "Cannot find course" });
+    }
+    res.json(course);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+/**
+ * Create a new course.
+ *
+ * @name POST /courses
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
+ * @returns {Object} The newly created course with a 201 status code.
+ */
+app.post("/courses", async (req, res) => {
+  try {
+    const newCourse = new Course({
+      // Get info from course body
+      courseName: req.body.courseName,
+      imageUrl: req.body.imageUrl,
+      descriptionShort: req.body.descriptionShort,
+      descriptionLong: req.body.descriptionLong,
+      timeToComplete: req.body.timeToComplete,
+      instructor: req.body.instructor,
+      category: req.body.category,
+    });
+    const savedCourse = await newCourse.save(); // Add the new course to the database
+    res.status(201).json(savedCourse); // Return the new course with a 201
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
