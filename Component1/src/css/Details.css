@@ -1,8 +1,23 @@
+#root {
+    margin-inline: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.detailsBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+    max-width: 800px;
+}
+
 img {
     max-width: 50em;
+    display: block;
+    margin: auto;
 }
 
 .detailsHeader {
     display: flex;
 }
-

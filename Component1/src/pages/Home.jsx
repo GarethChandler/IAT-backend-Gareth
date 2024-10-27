@@ -78,7 +78,8 @@ const Home = () => {
                 courseName={course.courseName}
                 imageUrl={course.imageUrl}
                 detailsUrl={course.detailsUrl}
-                description={course.descriptionShort}
+                descriptionShort={course.descriptionShort}
+                descriptionLong={course.descriptionLong}
                 timeToComplete={course.timeToComplete}
               />
             ))}
