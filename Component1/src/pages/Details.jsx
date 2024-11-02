@@ -22,12 +22,13 @@ const Details = () => {
       <div className="detailsBody">
         <h1>{courseName}</h1>
         <img src={imageUrl} alt={courseName} />
-        <p>Detailed description: {descriptionLong}</p>
-        <p>Time to complete: {timeToComplete}</p>
+        <h3>Course Details</h3>
+        <p>{descriptionLong}</p>
+        <h3>Time to complete</h3>
+        <p>{timeToComplete}</p>
         {/* Course modules. Need to connect to db or something to get modules and detailed description */}
         <fieldset>
           <legend>Course Modules</legend>
-          <button>Enrol now</button>
           <ul>
             <li>Module 1: Introduction to React</li>
             <li>Module 2: Components and Props</li>
@@ -35,6 +36,7 @@ const Details = () => {
             <li>Module 4: Handling Events</li>
             <li>Module 5: Conditional Rendering</li>
           </ul>
+          <button>Enrol now</button>
         </fieldset>
       </div>
     </>

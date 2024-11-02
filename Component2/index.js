@@ -51,6 +51,7 @@ const courseSchema = new mongoose.Schema({
   timeToComplete: { type: String, required: true },
   instructor: { type: String, required: true },
   category: { type: String, required: true },
+  modules: { type: Array, required: true },
 });
 
 // Define mongoDB model
@@ -112,6 +113,7 @@ app.post("/courses", async (req, res) => {
       timeToComplete: req.body.timeToComplete,
       instructor: req.body.instructor,
       category: req.body.category,
+      modules: req.body.modules,
     });
     const savedCourse = await newCourse.save(); // Add the new course to the database
     res.status(201).json(savedCourse); // Return the new course with a 201

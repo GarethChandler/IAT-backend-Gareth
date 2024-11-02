@@ -12,6 +12,10 @@
     max-width: 800px;
 }
 
+h3, fieldset {
+    margin-top: 3em;
+}
+
 img {
     max-width: 50em;
     display: block;
