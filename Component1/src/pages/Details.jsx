@@ -26,15 +26,11 @@ const Details = () => {
         <h1>{courseName}</h1>
         <img src={imageUrl} alt={courseName} />
         <h3>Course Details</h3>
-        <p>{descriptionLong}</p>
+        <p className="detailsText">{descriptionLong}</p>
         <h3>Time to complete</h3>
         <p>{timeToComplete}</p>
         {/* Course modules. Need to connect to db or something to get modules and detailed description */}
-        <fieldset>
-          <legend>Course Modules</legend>
-          <ModulesList modules={modules} />
-          <button>Enrol now</button>
-        </fieldset>
+        <ModulesList modules={modules} />
       </div>
     </>
   );

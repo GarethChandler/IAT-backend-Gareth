@@ -16,6 +16,10 @@ h3, fieldset {
     margin-top: 3em;
 }
 
+.detailsText {
+    text-align: justify;
+}
+
 img {
     max-width: 50em;
     display: block;

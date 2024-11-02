@@ -30,7 +30,7 @@ const CourseCard = ({
       <img src={imageUrl} alt={courseName} />
       <div className="courseCardText">
         <h2>{courseName}</h2>
-        <p>{descriptionShort}</p>
+        <p className="detailsShort">{descriptionShort}</p>
         <p>Time to complete: {timeToComplete}</p>
       </div>
       <button onClick={handleDetailsClick}>See details</button>
