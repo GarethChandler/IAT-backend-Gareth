@@ -8,6 +8,7 @@ const CourseCard = ({
   descriptionShort,
   descriptionLong,
   timeToComplete,
+  modules,
 }) => {
   const navigate = useNavigate();
 
@@ -19,6 +20,7 @@ const CourseCard = ({
         descriptionShort,
         descriptionLong,
         timeToComplete,
+        modules,
       },
     });
   };
@@ -43,6 +45,7 @@ CourseCard.propTypes = {
   descriptionShort: PropTypes.string.isRequired,
   descriptionLong: PropTypes.string.isRequired,
   timeToComplete: PropTypes.string.isRequired,
+  modules: PropTypes.array.isRequired,
 };
 
 export default CourseCard;

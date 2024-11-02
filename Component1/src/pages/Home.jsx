@@ -81,6 +81,7 @@ const Home = () => {
                 descriptionShort={course.descriptionShort}
                 descriptionLong={course.descriptionLong}
                 timeToComplete={course.timeToComplete}
+                modules={course.modules}
               />
             ))}
           </div>

@@ -2,13 +2,16 @@
 import { useLocation, Link } from "react-router-dom";
 import "../css/Details.css";
 import { useEffect } from "react";
+import ModulesList from "../components/ModulesList";
 
 const Details = () => {
   const location = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-  const { courseName, imageUrl, descriptionLong, timeToComplete } =
+
+  const { courseName, imageUrl, descriptionLong, timeToComplete, modules } =
     location.state || {};
   return (
     <>
@@ -29,13 +32,7 @@ const Details = () => {
         {/* Course modules. Need to connect to db or something to get modules and detailed description */}
         <fieldset>
           <legend>Course Modules</legend>
-          <ul>
-            <li>Module 1: Introduction to React</li>
-            <li>Module 2: Components and Props</li>
-            <li>Module 3: State and Lifecycle</li>
-            <li>Module 4: Handling Events</li>
-            <li>Module 5: Conditional Rendering</li>
-          </ul>
+          <ModulesList modules={modules} />
           <button>Enrol now</button>
         </fieldset>
       </div>
