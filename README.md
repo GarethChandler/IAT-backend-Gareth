@@ -64,22 +64,33 @@ WebApp (MicroCources)
 The frontend uses axios to fetch data from Express. This will display the courses on the home page. Course data is passed through with useState to the details page and modules react component.
 
 ### Component 4
-
+Caching
+Load Balancing
+High Availability
 
 
 # Installation
-Instructions on how to set up the project locally:
-
-sh
-
-Copy
+Instructions on how to set up the project locally:  
+Download as zip files and unzip.  
+Open the folder in VS Code.  
+In the terminal, navigate to Component 2 folder.  
+Copy  
+```
+npm install 
+npm update
+```  
+Create a new file in the 'Component 2' folder called '.env'  
+** See project documentation for connection string**  
+Copy the connection string to the .env file.  
+Copy  
+`npm run devStart`  
+Open a new terminal and navigate into component 1.  
+Copy  
+```
 npm install
-Usage
-How to run or use the project:
+npm update
+npm run dev
+```
 
-sh
-
-Copy
-npm start
 Features
 Highlight key features of the project.
