@@ -18,10 +18,45 @@ id: gareth.chandler4
 
 # Description
 ### Component 1
-The frontend of this web app uses React. Please see the files in the folder 'Component 1'. This project displays a list of courses and course details. Routing is handled by react-router-dom with two pages home and details.
+The frontend of this web app uses the React framework with Flexbox and CSS Grid for a responsive layout. @media queries adjust certain elements once the screen layout becomes narrow. Please see the files in the folder 'Component 1'. This project displays a list of courses and course details. Routing is handled by react-router-dom with two pages for home and details. React components for course card details and course modules are available. 
 
 ### Component 2
-The back end of the web app is node.js server using Express. 
+The back end of the web app uses a node.js server and Express framework. Please see folder 'Component 2'. Three API requests are avialable; GET, GET/id: and POST.
+
+**Data Model**
+WebApp (MicroCources)
+
+├── FontEnd (React)
+│   ├── Components
+│   │   ├── CourseCard
+│   │   └── ModulesList
+│   ├── Pages
+│   │   ├── Home
+│   │   └── Details
+│   ├── App.js
+│   └── main.jsx
+├── BackEnd (Express)
+│   ├── Models
+│   │   └── Course
+│   │        ├── courseName
+│   │        ├── description
+│   │        ├── instructor
+│   │        ├── durationOfTime
+│   │        └── Course
+│   ├── Routes
+│   │   ├── /courses
+│   │   ├── /courses/:id
+│   │   └── /courses
+│   ├── Middlewares
+│   │   └── parseJSON
+│   └── server.js
+└── Database
+    └── IAT_microservices (MongoDB)
+
+
+### Component 3
+The frontend uses middleware axios to fetch data from the API created in the server. 
+
 
 # Installation
 Instructions on how to set up the project locally:
