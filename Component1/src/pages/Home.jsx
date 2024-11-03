@@ -6,6 +6,7 @@ import axios from "axios";
 const Home = () => {
   const [courses, setCourses] = useState([]);
 
+  // Use axios to fetch data from the api
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -19,7 +20,7 @@ const Home = () => {
     fetchData();
   }, []);
 
-  // Courses to display
+  // Courses to display. Testing without MongoDB.
   // const courses = [
   //   {
   //     courseName: "Backend Development",

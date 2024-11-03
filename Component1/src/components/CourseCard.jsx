@@ -12,6 +12,8 @@ const CourseCard = ({
 }) => {
   const navigate = useNavigate();
 
+  // create state when button is clicked, to pass course details to the details page.
+  // Navigate to route /details.
   const handleDetailsClick = () => {
     navigate("/details", {
       state: {

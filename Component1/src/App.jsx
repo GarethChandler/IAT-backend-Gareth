@@ -5,6 +5,7 @@ import Details from "./pages/Details";
 
 function App() {
   return (
+    // Add two routes for home adn details pages.
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/details" element={<Details />} />

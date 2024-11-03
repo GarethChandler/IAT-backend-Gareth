@@ -7,6 +7,7 @@ import ModulesList from "../components/ModulesList";
 const Details = () => {
   const location = useLocation();
 
+  // reset page to the top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
@@ -29,7 +30,7 @@ const Details = () => {
         <p className="detailsText">{descriptionLong}</p>
         <h3>Time to complete</h3>
         <p>{timeToComplete}</p>
-        {/* Course modules. Need to connect to db or something to get modules and detailed description */}
+        {/* Course modules. content passed from CourseCard*/}
         <ModulesList modules={modules} />
       </div>
     </>
