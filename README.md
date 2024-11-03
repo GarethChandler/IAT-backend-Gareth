@@ -1,8 +1,9 @@
 # Web Development (Back-End)
-This is my submission for the Project Assessment. This project is a MERN stack web application using React, Node, Express and MongoDB.
+This is my submission for the Project Assessment in the Web Development (Back-End) course through IAT. This project is a MERN stack web application using React, Node, Express and MongoDB. The web application is for a fictional business 'Microcourses' providing online learning to students.
 
 ## Student details
-Gareth Chandler \n
+Gareth Chandler
+
 id: gareth.chandler4
 
 
@@ -16,7 +17,11 @@ id: gareth.chandler4
 
 
 # Description
-A more detailed explanation of what your project does.
+### Component 1
+The frontend of this web app uses React. Please see the files in the folder 'Component 1'. This project displays a list of courses and course details. Routing is handled by react-router-dom with two pages home and details.
+
+### Component 2
+The back end of the web app is node.js server using Express. 
 
 # Installation
 Instructions on how to set up the project locally:
