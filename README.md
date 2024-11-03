@@ -83,11 +83,16 @@ npm install
 npm update
 ```  
 Create a new file in the 'Component 2' folder called '.env'  
-** See project documentation for connection string**  
-Copy the connection string to the .env file.  
+  
+**See project documentation for connection string**  
+  
+Copy the connection string to the .env file. Save all.  
 
 Copy  
-`npm run devStart`  
+```
+npm run devStart
+```  
+
 Open a new terminal and navigate into component 1.  
 
 Copy  
@@ -97,5 +102,4 @@ npm update
 npm run dev
 ```
 
-Features
-Highlight key features of the project.
+
