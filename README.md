@@ -21,11 +21,14 @@ id: gareth.chandler4
 The frontend of this web app uses the React framework with Flexbox and CSS Grid for a responsive layout. @media queries adjust certain elements once the screen layout becomes narrow. Please see the files in the folder 'Component 1'. This project displays a list of courses and course details. Routing is handled by react-router-dom with two pages for home and details. React components for course card details and course modules are available. 
 
 ### Component 2
-The back end of the web app uses a node.js server and Express framework. Please see folder 'Component 2'. Three API requests are avialable; GET, GET/id: and POST.
+The back end of the web app uses a node.js server and Express framework. Please see folder 'Component 2'. Mongoose, an object data modeling library, is used to connect to MongoDB.  
+**⚠️ Please see the assessment files for connection string and instructions**  
+Three API requests are avialable; GET/courses, GET/courses/id: and POST/courses.
 
 **Data Model**
+```
 WebApp (MicroCources)
-
+│
 ├── FontEnd (React)
 │   ├── Components
 │   │   ├── CourseCard
@@ -39,23 +42,29 @@ WebApp (MicroCources)
 │   ├── Models
 │   │   └── Course
 │   │        ├── courseName
-│   │        ├── description
+│   │        ├── descriptionShort
+│   │        ├── descriptionLong
+│   │        ├── imgUrl
 │   │        ├── instructor
 │   │        ├── durationOfTime
-│   │        └── Course
+│   │        ├── category
+│   │        └── modules
 │   ├── Routes
-│   │   ├── /courses
-│   │   ├── /courses/:id
-│   │   └── /courses
+│   │   ├── GET/courses
+│   │   ├── GET/courses/:id
+│   │   └── POST/courses
 │   ├── Middlewares
 │   │   └── parseJSON
 │   └── server.js
 └── Database
     └── IAT_microservices (MongoDB)
-
+```
 
 ### Component 3
-The frontend uses middleware axios to fetch data from the API created in the server. 
+The frontend uses axios to fetch data from Express. This will display the courses on the home page. Course data is passed through with useState to the details page and modules react component.
+
+### Component 4
+
 
 
 # Installation
