@@ -65,8 +65,30 @@ The frontend uses axios to fetch data from Express. This will display the course
 
 ### Component 4
 Caching  
+Report on how would you Implement caching strategies to handle a large number of courses efficiently.   
+HTTP caching to cache responses and remove need to request the abckend server agian  
+Content delivery Networks to cache the course images and CSS closer to the users location.This will reduce latency and offload traffic from the original server.  
+Implement Redis to cache the cources objects such as teh MongoDB coursees objects in memory and reduce the need to fetch the data every time the user navigates to the Home page.  
+Cache the home page entirely to avoid generating it dynammically  
+CAche the data base queries to reduc database load and improve the response times.  
+
+Plan for cache invalidation.  
+Time-based expiration. enet driven invalidation such as when a new cours is added.  
+
+
 Load Balancing  
-High Availability
+to distribute incoming traffic accros a group of backend server pool. The load balncer would be deployed between the front facing web app and the applicaiton servers. It handles client requests and distributes them accross servers. Ensure high availability by directing requests to availabel servers. Can scale up and donw based on demand. A round robin algorithm would be sufficient for my simple applicaiton.
+This improves downtime. Is horizontally scallable. No single point of failure.
+
+High Availability  
+Load balancing,  
+redundancy and failover. deploy redundant copies of backend services.  
+Auto scaling by cloud platforms. Increase number of backend instances based on demand.  
+Monitoring backend.  
+Fault tolerance. retires. graceful degradations.  
+database replications.  
+Disaster recovery plan  
+Testing and maintenacnce. 
 
 
 # Installation
