@@ -1,5 +1,5 @@
 # Web Development (Back-End)
-This is my submission for the Project Assessment in the Web Development (Back-End) course through IAT. This project is a MERN stack web application using React, Node, Express and MongoDB. The web application is for a fictional business 'Microcourses' providing online learning to students.
+This is my submission for the Project Assessment in the Web Development (Back-End) course through IAT. This project is a MERN stack web application using React, Node.js, Express and MongoDB. The web application displays courses for a fictional business called 'Microcourses' providing online learning to students.
 
 ## Student details
 Gareth Chandler
@@ -23,7 +23,7 @@ The frontend of this web app uses the React framework with Flexbox and CSS Grid 
 ### Component 2
 The back end of the web app uses a node.js server and Express framework. Please see folder 'Component 2'. Mongoose, an object data modeling library, is used to connect to MongoDB.  
 **⚠️ Please see the assessment files for connection string and instructions**  
-Three API requests are avialable; GET/courses, GET/courses/id: and POST/courses.
+Three API requests are avialable; GET/courses, GET/courses/id: and POST/courses.  
 
 **Data Model**
 ```
@@ -61,10 +61,10 @@ WebApp (MicroCources)
 ```
 
 ### Component 3
-The frontend uses axios to fetch data from Express. This will display the courses on the home page. Course data is passed through with useState to the details page and modules react component.
+The frontend uses axios to fetch data from Express. This will display the courses on the home page. Course data is passed through with useState() to the 'details' page and the 'modules' react component.
 
 ### Component 4
-Caching  
+**Caching**  
 Report on how would you Implement caching strategies to handle a large number of courses efficiently.   
 HTTP caching to cache responses and remove need to request the abckend server agian  
 Content delivery Networks to cache the course images and CSS closer to the users location.This will reduce latency and offload traffic from the original server.  
@@ -76,11 +76,11 @@ Plan for cache invalidation.
 Time-based expiration. enet driven invalidation such as when a new cours is added.  
 
 
-Load Balancing  
+**Load Balancing**  
 to distribute incoming traffic accros a group of backend server pool. The load balncer would be deployed between the front facing web app and the applicaiton servers. It handles client requests and distributes them accross servers. Ensure high availability by directing requests to availabel servers. Can scale up and donw based on demand. A round robin algorithm would be sufficient for my simple applicaiton.
 This improves downtime. Is horizontally scallable. No single point of failure.
 
-High Availability  
+**High Availability**  
 Load balancing,  
 redundancy and failover. deploy redundant copies of backend services.  
 Auto scaling by cloud platforms. Increase number of backend instances based on demand.  
