@@ -64,21 +64,24 @@ WebApp (MicroCources)
 The frontend uses axios to fetch data from Express. This will display the courses on the home page. Course data is passed through with useState() to the 'details' page and the 'modules' react component.
 
 ### Component 4
+The following report provides details on advanced functionality and how I would implement these features in this application.  
+  
 **Caching**  
-Report on how would you Implement caching strategies to handle a large number of courses efficiently.   
-HTTP caching to cache responses and remove need to request the abckend server agian  
-Content delivery Networks to cache the course images and CSS closer to the users location.This will reduce latency and offload traffic from the original server.  
-Implement Redis to cache the cources objects such as teh MongoDB coursees objects in memory and reduce the need to fetch the data every time the user navigates to the Home page.  
-Cache the home page entirely to avoid generating it dynammically  
-CAche the data base queries to reduc database load and improve the response times.  
+Caching allows application resources to be stored on the client device or closer server hardware to reduce latency and enable offline funcitonality. This also allows the application to handle a large number of courses efficiently.   
+HTTP caching stores server responses and removes need to request the backend server again. These may be private http cahce on the the user device or shared such on a proxy server.  
+Content delivery Networks (CDN) cache the course images and CSS closer to the users location.This will reduce latency and offload traffic from the original server.  
+I would investigate implementing Redis to cache the cources objects such as in MongoDB. This will store them in memory and reduce the need to fetch the data every time the user navigates to the Home page.  
+Caching the home page entirely will avoid needing to generate it dynammically.  
+Cache the data base queries to reduce database load and improve the response times.  
 
-Plan for cache invalidation.  
-Time-based expiration. enet driven invalidation such as when a new cours is added.  
+Plan for cache invalidation:  
+I would set up a time-based expiration. Microcourses supplies learnign on a set schedule. The cache may be removed in line with this every 6-7 weeks. I would also set event driven invalidation such as when a new course is added to ensure the correct courses are served to the user.  
 
 
 **Load Balancing**  
 to distribute incoming traffic accros a group of backend server pool. The load balncer would be deployed between the front facing web app and the applicaiton servers. It handles client requests and distributes them accross servers. Ensure high availability by directing requests to availabel servers. Can scale up and donw based on demand. A round robin algorithm would be sufficient for my simple applicaiton.
 This improves downtime. Is horizontally scallable. No single point of failure.
+
 
 **High Availability**  
 Load balancing,  
@@ -94,7 +97,7 @@ Testing and maintenacnce.
 # Installation
 Instructions on how to set up the project locally:  
 
-Download as zip files and unzip.  
+Download as zip files and unzip to your local drive.  
 Open the folder in VS Code.  
 
 In the terminal, navigate to Component 2 folder.  
