@@ -79,30 +79,38 @@ I would set up a time-based expiration. Microcourses supplies learnign on a set 
 
 
 **Load Balancing**  
-to distribute incoming traffic accros a group of backend server pool. The load balncer would be deployed between the front facing web app and the applicaiton servers. It handles client requests and distributes them accross servers. Ensure high availability by directing requests to availabel servers. Can scale up and donw based on demand. A round robin algorithm would be sufficient for my simple applicaiton.
-This improves downtime. Is horizontally scallable. No single point of failure.
+Load balancing is a technique to distribute incoming traffic accros a group of backend servers called a pool. It is a technique to ensure high availability as discussed below. The load balancer would be deployed between the front facing web app and the applicaiton servers. It handles client requests and distributes them accross the servers. It ensures high availability by directing requests to available servers. It can scale up and down based on demand. i would implement a simple round robin algorithm as this would be sufficient for my applicaiton. An example service that provides load balancing is Micorsoft's Azure.  
+The benefits include improved downtime, is horizontally scallable as my traffic increases, and has no single point of failure.  
 
 
 **High Availability**  
-Load balancing,  
-redundancy and failover. deploy redundant copies of backend services.  
-Auto scaling by cloud platforms. Increase number of backend instances based on demand.  
-Monitoring backend.  
-Fault tolerance. retires. graceful degradations.  
-database replications.  
-Disaster recovery plan  
-Testing and maintenacnce. 
+High availabilty refers to the applications reliability and uptime for users. For my simple web app I have determined that the service level agreement should be 99.5% availabilty as Microservices is a very important and high value learning provider. To address availability I would split my application in different sections. These could be the web frontend, the application logic and the database.  
+As Mongodb has a very high availability guarantee, I would upgrade this last because it would provide the least benefit for cost.  
+  
+Web frontend:
+Load balancing for horizontal scalling and high traffic scenarios.  
+I would configure auto-scaling by cloud platforms to increase number of backend instances based on demand.  
+Finally, fault tolerance and graceful degradations.
+  
+Application logic:  
+For this level I would also use load balancing and auto-scaling.
+Setting up monitoring to maintain backend health.   
+
+Database:  
+I would consider database replications last due to the high availability of Mongodb.  
+A disaster recovery plan may be used to ensure I have procedures and processes in place to restore services.  
+Finally, conducting regular testing and maintenace will ensure the health of the database and data.
 
 
 # Installation
 Instructions on how to set up the project locally:  
 
-Download as zip files and unzip to your local drive.  
+Clone the project files and unzip to your local drive.  
 Open the folder in VS Code.  
 
 In the terminal, navigate to Component 2 folder.  
 
-Copy  
+Copy and paste  
 ```
 npm install 
 npm update
@@ -113,14 +121,14 @@ Create a new file in the 'Component 2' folder called '.env'
   
 Copy the connection string to the .env file. Save all.  
 
-Copy  
+Copy and paste  
 ```
 npm run devStart
 ```  
 
 Open a new terminal and navigate into component 1.  
 
-Copy  
+Copy and paste  
 ```
 npm install
 npm update
