@@ -24,6 +24,7 @@ The frontend of this web app uses the React framework with Flexbox and CSS Grid 
 The back end of the web app uses a node.js server and Express framework. Please see folder 'Component 2'. Mongoose, an object data modeling library, is used to connect to MongoDB.  
 **⚠️ Please see the assessment files for connection string and instructions**  
 Three API requests are avialable; GET/courses, GET/courses/id: and POST/courses.  
+Postman request JSON files are available as part of the assessment documents.
 
 **Data Model**
 ```
