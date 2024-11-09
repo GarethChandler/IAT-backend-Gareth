@@ -76,7 +76,7 @@ Caching the home page entirely will avoid needing to generate it dynammically.
 Cache the data base queries to reduce database load and improve the response times.  
 
 Plan for cache invalidation:  
-I would set up a time-based expiration. Microcourses supplies learnign on a set schedule. The cache may be removed in line with this every 6-7 weeks. I would also set event driven invalidation such as when a new course is added to ensure the correct courses are served to the user.  
+I would set up a time-based expiration. Microcourses supplies learning on a set schedule. The cache may be removed in line with this every 6-7 weeks. I would also set event driven invalidation such as when a new course is added to ensure the correct courses are served to the user.  
 
 
 **Load Balancing**  
